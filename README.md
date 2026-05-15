@@ -3,3 +3,4 @@ The Smart Interviews DSA Course is a structured and comprehensive program design
 
 <img width="718" height="617" alt="image" src="https://github.com/user-attachments/assets/5420752b-d3f4-4995-bdf8-b0229c1cb28d" />
 
+<img width="1160" height="621" alt="image" src="https://github.com/user-attachments/assets/7f89e6ad-1168-4018-8838-ba5273846fee" />
