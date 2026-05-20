@@ -1,0 +1,29 @@
+//Tower of Hanoi
+Constraints
+1 <= T <= 10
+1 <= N <= 15
+
+import java.io.*;
+import java.util.*;
+
+public class Main {
+    static void hanoi(int n,char A,char B,char C){//n--> number of disks, A--> source rod, B--> helper rod, C--> destination rod
+        if(n==1){
+            System.out.println("Move 1 from "+A+" to "+C);
+            return;
+        }
+        hanoi(n-1,A,C,B);//moving nth disk form A to B with the Help of C
+        System.out.println("Move "+n+" from "+A+" to "+C);
+        hanoi(n-1,B,A,C);//Moving nth disk from B to C with the help of A
+    }
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int T=sc.nextInt();
+        while(T-->0){
+        int n=sc.nextInt();
+        long moves=(1L<<n)-1;//min 2^n-1 movies are reqired
+        System.out.println(moves);
+        hanoi(n,'A','B','C');
+        }
+    }
+}
