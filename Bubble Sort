@@ -1,0 +1,62 @@
+//Question:
+
+
+Implement Bubble Sort bookmark_borderGiven an array of size N, implement Bubble Sort.
+
+Input Format
+The first line of input contains an integer N - the size of an array. The second line contains the elements of the array.
+
+Output Format
+For each iteration of Bubble Sort, print the array elements.
+
+Constraints
+1 <= N <= 20
+1 <= A[i] <= 103
+
+Example
+Input
+6
+5 8 10 15 3 6
+
+Output
+5 8 10 3 6 15
+5 8 3 6 10 15
+5 3 6 8 10 15
+3 5 6 8 10 15
+3 5 6 8 10 15
+
+Explanation
+
+Self Explanatory
+
+//Code:
+
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int[] A=new int[n];
+
+        for(int i=0;i<n;i++){
+            A[i]=sc.nextInt();
+        }
+        for(int i=0;i<n-1;i++){
+            for(int j=0;j<n-i-1;j++){
+                if(A[j]>A[j+1]){
+                    int temp=A[j];
+                    A[j]=A[j+1];
+                    A[j+1]=temp;
+                }
+            }
+            for(int k=0;k<n;k++){
+            System.out.print(A[k]+" ");
+        }
+        System.out.println();
+        }
+        sc.close();
+    }
+}
