@@ -1,4 +1,4 @@
-//Question 
+//Question:(Basic)
 
 Implement Selection Sort bookmark_borderGiven an array of size N having unique elements, implement Selection Sort.
 Note: Implement Selection Sort by selecting smallest element at every step.
