@@ -1,0 +1,98 @@
+Question: 
+
+Print Hollow Diamond Pattern bookmark_borderPrint a hollow diamond pattern using '*'. See examples for more details.
+
+Input Format
+The first line of input contains T - the number of test cases. It is followed by T lines, each line contains a single odd integer N - the size of the diamond.
+
+Output Format
+For each test case, print the test case number as shown, followed by the diamond pattern, separated by a new line.
+
+Constraints
+1 <= T <= 100
+3 <= N <= 201
+
+Example
+Input4
+3
+7
+5
+15
+
+OutputCase #1:
+ *
+* *
+ *
+Case #2:
+   *
+  * *
+ *   *
+*     *
+ *   *
+  * *
+   *
+Case #3:
+  *
+ * *
+*   *
+ * *
+  *
+Case #4:
+       *
+      * *
+     *   *
+    *     *
+   *       *
+  *         *
+ *           *
+*             *
+ *           *
+  *         *
+   *       *
+    *     *
+     *   *
+      * *
+       *
+// Code in java:
+
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int T=sc.nextInt();
+        for(int k=1;k<=T;k++){
+            int n=sc.nextInt();
+            int mid=n/2;
+            System.out.println("Case #"+k+":");
+            for(int i=0;i<=mid;i++){
+                for(int j=0;j<mid-i;j++){
+                    System.out.print(" ");
+                }
+                for(int j=0;j<2*i+1;j++){
+                    if(j==0||j==2*i){
+                       System.out.print("*");
+                    }else{
+                        System.out.print(" ");
+                    }
+                }
+                System.out.println();
+            }
+            for(int i=mid-1;i>=0;i--){
+                for(int j=0;j<mid-i;j++){
+                    System.out.print(" ");
+                }
+                for(int j=0;j<2*i+1;j++){
+                    if(j==0||j==2*i){
+                    System.out.print("*");
+                    }else{
+                        System.out.print(" ");
+                    }
+                }
+                System.out.println();
+            }
+        }
+    }
+}
